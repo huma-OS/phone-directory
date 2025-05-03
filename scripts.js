@@ -10,6 +10,9 @@ const mobileInput = document.getElementById('mobile');
 const emailInput = document.getElementById('email');
 const errDiv = document.getElementById('error');
 const submitBtn = document.getElementById('submit');
+const searchInput = document.getElementById('search');
+const contactBody = document.getElementById('contactBody');
+const noResult = document.getElementById('noResult');
 
 let valid = true;
 
@@ -64,4 +67,30 @@ submitBtn.addEventListener('click', function () {
   newRow.insertCell(0).innerHTML = `<img src="./img/user.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;"> ${name}`;
   newRow.insertCell(1).innerHTML = `<img src="./img/call.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;"> ${mobile}`;
   newRow.insertCell(2).innerHTML = `<img src="./img/email.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;"> ${email}`;
+});
+
+searchInput.addEventListener('input', e => {
+  const term = e.target.value.trim();
+  const rows = contactBody.querySelectorAll('tr');
+  let found = false;
+
+  rows.forEach(row => {
+    const cell = row.cells[1];
+    const text = cell.textContent.replace(/\s+/g, '');
+    cell.innerHTML = cell.innerHTML.replace(/<mark>|<\/mark>/g, '');
+
+    if (!term || text.includes(term)) {
+      row.style.display = '';
+      if (term) {
+        const highlighted = text.replace(new RegExp(term, 'g'), `<mark>${term}</mark>`);
+        const icon = cell.querySelector('img') ? .outerHTML || '';
+        cell.innerHTML = `${icon} ${highlighted}`;
+      }
+      found = true;
+    } else {
+      row.style.display = 'none';
+    }
+  });
+
+  noResult.classList.toggle('dn', found || !term);
 });
