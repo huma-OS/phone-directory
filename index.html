@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./style.css"  rel="stylesheet" type="text/css"/>
+  <link href="./style.css" rel="stylesheet" type="text/css" />
   <title>Phone Directory</title>
 </head>
+
 <body>
   <main>
     <nav>
       <h1 class="margin20 textCenter fs20">Phone Directory</h1>
     </nav>
-    
+
     <div class="textCenter">
       <div class="textCenter inputContent">
         <div class="txtLeft marginTB40 fb">
           <form class="txtLeft" onSubmit="event.preventDefault();">
-          <input type="text" id="name" value="" aria-label="Contact Name" placeholder="Contact Name"/>
-          <input type="number" maxlength="10" id="mobile" value="" aria-label="Mobile Number" placeholder="Mobile Number"/>
-          <input type="email" id="email" value="" aria-label="Email" placeholder="Email"/>
-          <!-- <input type="submit" class="btn" id="submit" value="ADD VENDOR"/> -->
-          <button class="btn" id="submit">ADD VENDOR</button>
-          <div id="error" class="dn error padT10 textCenter">Invalid Input!</div>
+            <input type="text" id="name" value="" aria-label="Contact Name" placeholder="Contact Name" />
+            <input type="number" maxlength="10" id="mobile" value="" aria-label="Mobile Number"
+              placeholder="Mobile Number" />
+            <input type="email" id="email" value="" aria-label="Email" placeholder="Email" />
+            <!-- <input type="submit" class="btn" id="submit" value="ADD VENDOR"/> -->
+            <button class="btn" id="submit">ADD VENDOR</button>
+            <div id="error" class="dn error padT10 textCenter">Invalid Input!</div>
           </form>
         </div>
       </div>
       <div class="inputContent">
         <form class="marginT40 searchForm" onSubmit="event.preventDefault();">
           <label class="searchFormLabel" for="search">Search Contact</label>
-          <input type="text" id="search" value="" placeholder="Mobile Number Only"/>
+          <input type="text" id="search" value="" placeholder="Mobile Number Only" />
         </form>
       </div>
-      
+
       <div class="marginT40 padL10 tab cursorPtr" id="contactsSummary">Contacts Summary</div>
       <div id="contactSummary" class="contactSummary">
         <table aria-labelledby="contactsSummary" id="summaryTable">
@@ -39,15 +42,24 @@
             <tr>
               <!-- <th><button id="nameColumn">Name</button></th> -->
               <th id="nameColumn">Name</th>
-              <th>Mobile</th> 
+              <th>Mobile</th>
               <th>Email</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Admin</td>
-              <td>9999999999</td> 
-              <td>admin@xyzcompany.com</td>
+          <tbody id="contactBody">
+            <tr id="defaultRow">
+              <td>
+                <img src="./img/user.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                Admin
+              </td>
+              <td>
+                <img src="./img/call.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                9999999999
+              </td>
+              <td>
+                <img src="./img/email.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                admin@xyzcompany.com
+              </td>
             </tr>
           </tbody>
         </table>
@@ -55,6 +67,7 @@
       </div>
     </div>
   </main>
-  
+  <script src="scripts.js"></script>
 </body>
+
 </html>
