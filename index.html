@@ -11,36 +11,34 @@
 <body>
   <main>
     <nav>
-      <h1 class="margin20 textCenter fs20">Phone Directory</h1>
+      <h1 class="textCenter">Phone Directory</h1>
     </nav>
 
     <div class="textCenter">
       <div class="textCenter inputContent">
-        <div class="txtLeft marginTB40 fb">
+        <div class="txtLeft">
           <form class="txtLeft" onSubmit="event.preventDefault();">
             <input type="text" id="name" value="" aria-label="Contact Name" placeholder="Contact Name" />
             <input type="number" maxlength="10" id="mobile" value="" aria-label="Mobile Number"
               placeholder="Mobile Number" />
             <input type="email" id="email" value="" aria-label="Email" placeholder="Email" />
-            <!-- <input type="submit" class="btn" id="submit" value="ADD VENDOR"/> -->
-            <button class="btn" id="submit">ADD VENDOR</button>
+            <button class="btn" id="submit">ADD CONTACT</button>
             <div id="error" class="dn error padT10 textCenter">Invalid Input!</div>
           </form>
         </div>
       </div>
       <div class="inputContent">
-        <form class="marginT40 searchForm" onSubmit="event.preventDefault();">
+        <form class="searchForm" onSubmit="event.preventDefault();">
           <label class="searchFormLabel" for="search">Search Contact</label>
           <input type="text" id="search" value="" placeholder="Mobile Number Only" />
         </form>
       </div>
 
-      <div class="marginT40 padL10 tab cursorPtr" id="contactsSummary">Contacts Summary</div>
+      <div class="tab" id="contactsSummary">Contacts Summary</div>
       <div id="contactSummary" class="contactSummary">
         <table aria-labelledby="contactsSummary" id="summaryTable">
           <thead>
             <tr>
-              <!-- <th><button id="nameColumn">Name</button></th> -->
               <th id="nameColumn">Name</th>
               <th>Mobile</th>
               <th>Email</th>

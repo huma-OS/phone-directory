@@ -1,9 +1,3 @@
-// function sum(a, b) {
-//   return a + b;
-// }
-
-// module.exports = sum;
-
 
 const nameInput = document.getElementById('name');
 const mobileInput = document.getElementById('mobile');
@@ -83,7 +77,7 @@ searchInput.addEventListener('input', e => {
       row.style.display = '';
       if (term) {
         const highlighted = text.replace(new RegExp(term, 'g'), `<mark>${term}</mark>`);
-        const icon = cell.querySelector('img') ? .outerHTML || '';
+        const icon = cell.querySelector('img') ?.outerHTML || '';
         cell.innerHTML = `${icon} ${highlighted}`;
       }
       found = true;
