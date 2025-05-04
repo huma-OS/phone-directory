@@ -60,13 +60,7 @@ button:active {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* remove */
   gap: 10px;
-}
-
-.fb {
-  font-weight: bold;
-  /* ?????? */
 }
 
 .searchForm {
@@ -81,15 +75,11 @@ button:active {
   color: #333;
 }
 
-
-.marginT40 {
-  margin-top: 20px;
-}
-
 .tab {
   font-weight: bold;
   padding: 8px 20px;
   background: #eee;
+  margin-top: 20px;
 }
 
 /* ====== Input Container ====== */
@@ -129,10 +119,8 @@ tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 
-/* cccccc */
 
-
-/* ✅ Mobile-first default table layout */
+/* Mob */
 table,
 thead,
 tbody,
@@ -165,66 +153,15 @@ td {
   align-items: center;
 }
 
-/* td::before {
-  content: attr(data-label);
-  font-weight: 600;
-  color: #666;
-} */
 
 td:last-child {
   border-bottom: none;
 }
 
-/* ✅ Desktop override layout */
-/* @media (min-width: 768px) { */
-table {
-  /* display: table; */
-  /* width: 100%; */
-  /* border-collapse: collapse; */
-}
-
-/* thead {
-    display: table-header-group;
-  } */
-
-/* tbody {
-    display: table-row-group;
-  } */
-
-/* tr {
-    display: table-row;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-  } */
-
-/* th,
-  td {
-    display: table-cell;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    min-width: 120px;
-  } */
-
-/* td::before {
-    content: none;
-  } */
-
-/* tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  } */
-/* } */
-
 .input-error {
   border: 2px solid red !important;
   border-radius: 12px;
 }
-
-
-/* cccccc */
 
 /* ====== Media Queries for Larger Screens ====== */
 

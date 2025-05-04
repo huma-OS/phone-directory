@@ -95,15 +95,25 @@ The following data should **not** pass validation based on these regex rules:
 
 ## Running Tests
 
-Install dependencies and run tests using Jest:
-
 ### 1. **Install Dependencies**
 
+Install both Jest and the JSDOM environment required for DOM-related tests:
+
 ```bash
-npm install
+npm install --save-dev jest jest-environment-jsdom
 ```
 
-### 2. **Run Tests**
+### 2. **Add Jest Configuration**
+
+Create a `jest.config.js` file in the root of your project and add the following:
+
+```js
+module.exports = {
+  testEnvironment: "jest-environment-jsdom", // Ensure this is set
+};
+```
+
+### 3. **Run Tests**
 
 ```bash
 npm test
@@ -115,12 +125,10 @@ Or:
 npm run test
 ```
 
-Make sure your `package.json` includes the following:
+Ensure your `package.json` includes this script:
 
 ```json
 "scripts": {
   "test": "jest"
 }
 ```
-
----
