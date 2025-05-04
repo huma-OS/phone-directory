@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <title>Phone Directory</title>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <h1 class="textCenter">Phone Directory</h1>
+    </nav>
+
+    <div class="textCenter">
+      <div class="textCenter inputContent">
+        <div class="txtLeft">
+          <form class="txtLeft" onSubmit="event.preventDefault();">
+            <input type="text" id="name" value="" aria-label="Contact Name" placeholder="Contact Name" />
+            <input type="number" maxlength="10" id="mobile" value="" aria-label="Mobile Number"
+              placeholder="Mobile Number" />
+            <input type="email" id="email" value="" aria-label="Email" placeholder="Email" />
+            <button class="btn" id="submit">ADD CONTACT</button>
+            <div id="error" class="dn error padT10 textCenter">Invalid Input!</div>
+          </form>
+        </div>
+      </div>
+      <div class="inputContent">
+        <form class="searchForm" onSubmit="event.preventDefault();">
+          <label class="searchFormLabel" for="search">Search Contact</label>
+          <input type="text" id="search" value="" placeholder="Mobile Number Only" />
+        </form>
+      </div>
+
+      <div class="tab" id="contactsSummary">Contacts Summary</div>
+      <div id="contactSummary" class="contactSummary">
+        <table aria-labelledby="contactsSummary" id="summaryTable">
+          <thead>
+            <tr>
+              <th id="nameColumn">Name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="contactBody">
+            <tr id="defaultRow">
+              <td>
+                <img src="./img/user.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                Admin
+              </td>
+              <td>
+                <img src="./img/call.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                9999999999
+              </td>
+              <td>
+                <img src="./img/email.png" alt="Name Icon" style="width:30px; vertical-align:middle; margin-right:5px;">
+                admin@xyzcompany.com
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="noResult" class="noResult dn">No Results Found</div>
+      </div>
+    </div>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

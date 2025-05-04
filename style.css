@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* ====== Base ====== */
+body {
+  margin: 0 auto;
+  font-family: quicksand;
+  color: #333;
+}
+
+nav {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+input,
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  background: lightgreen;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.btn:hover {
+  color: whitesmoke;
+}
+
+.error,
+.noResult {
+  color: red;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.dn {
+  display: none;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.txtLeft {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.searchFormLabel {
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.tab {
+  font-weight: bold;
+  padding: 8px 20px;
+  background: #eee;
+  margin-top: 20px;
+}
+
+/* ====== Input Container ====== */
+
+.inputContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* ====== Contact Summary ====== */
+.contactSummary {
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  min-width: 120px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+
+/* Mob */
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  display: block;
+  width: 97%;
+}
+
+thead {
+  display: none;
+}
+
+tr {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+td {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+
+td:last-child {
+  border-bottom: none;
+}
+
+.input-error {
+  border: 2px solid red !important;
+  border-radius: 12px;
+}
+
+/* ====== Media Queries for Larger Screens ====== */
+
+@media (min-width: 768px) {
+  .txtLeft {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .txtLeft input {
+    flex: 1 1 calc(33.33% - 10px);
+    margin-bottom: 0;
+  }
+
+  .btn {
+    flex: 1 1 100%;
+  }
+}
